@@ -4,6 +4,7 @@ import Data from './Components/Data';
 import Demo1 from './Components/Demo1';
 import Demo2 from './Components/Demo2';
 import Demo3 from './Components/Demo3';
+import MsgContext from './Context/MsgContext';
 
 function App() {
 
@@ -18,12 +19,14 @@ function App() {
     
     <>
     
-    <Data msg={msg} handleInput={handleInput}></Data>
-    <Demo2 msg={msg}></Demo2>
-    <Demo3 msg={msg} handleInput={handleInput}></Demo3>
-    <Demo1 msg={msg}></Demo1>
+    <MsgContext.Provider value={[ msg, handleInput ]}>
 
+      <Data></Data>
+      <Demo2></Demo2>
+      <Demo3></Demo3>
+      <Demo1></Demo1>
 
+    </MsgContext.Provider>
 
     </>
   );

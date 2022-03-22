@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import MsgContext from '../Context/MsgContext';
 
-const Data = ({ msg, setMsg, handleInput }) => {
+const Data = () => {
+
+  const [ msg, handleInput ] = useContext(MsgContext);
 
   return (
     <Container>
