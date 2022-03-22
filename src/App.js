@@ -18,10 +18,10 @@ function App() {
     
     <>
     
-    <Data msg={msg} setMsg={setMsg} handleInput={handleInput}></Data>
-    <Demo2></Demo2>
-    <Demo3></Demo3>
-    <Demo1></Demo1>
+    <Data msg={msg} handleInput={handleInput}></Data>
+    <Demo2 msg={msg}></Demo2>
+    <Demo3 msg={msg} handleInput={handleInput}></Demo3>
+    <Demo1 msg={msg}></Demo1>
 
 
 

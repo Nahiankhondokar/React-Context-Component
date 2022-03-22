@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Demo1 = () => {
+const Demo1 = ({ msg }) => {
   return (
     <Container>
         <Row>
             <Col className=''>
-                <h2>dfa</h2>
+                <h2>{msg}</h2>
             </Col>
         </Row>
     </Container>
